@@ -1,8 +1,13 @@
 import angular from "angular";
 import uiRouter from '@uirouter/angularjs';
+import ngStorage from "ngstorage";
 import config from './App.config';
-import fooController from './controller/fooController';
+import uploadController from './state/upload/controller';
+import clothFactory from './factory/clothFactory';
+import to64 from './directive/to64';
 
-angular.module("app", [uiRouter])
+angular.module("app", [uiRouter, ngStorage.name])
     .config(config)
-.controller("fooController", fooController);
+    .factory("clothFactory", clothFactory)
+    .directive("to64", to64)
+.controller("uploadController", uploadController);

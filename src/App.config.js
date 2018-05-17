@@ -1,7 +1,7 @@
-// config.$inject = ["$urlRouterProvider", "$stateProvider", "$localStorageProvider"];
 config.$inject = ["$urlRouterProvider", "$stateProvider"];
-// export default function config($urlRouterProvider, $stateProvider, $localStorageProvider) { // eslint-disable-line
+// config.$inject = ["$urlRouterProvider", "$stateProvider"];
 export default function config($urlRouterProvider, $stateProvider) { // eslint-disable-line
+// export default function config($urlRouterProvider, $stateProvider) { // eslint-disable-line
     $urlRouterProvider.otherwise('/');
     $stateProvider
         .state("W", {
@@ -20,8 +20,16 @@ export default function config($urlRouterProvider, $stateProvider) { // eslint-d
             url:'/',
             views: {
                 body: {
-                    template: require('./state/foo.html'),
-                    controller: 'fooController',
+                    template: require('./state/upload/tpl.html'),
+                    controller: 'uploadController',
+                }
+            }
+        })
+        .state("W.wardrobe", {
+            url:'/wardrobe',
+            views: {
+                body: {
+                    template: require('./state/wardrobe/tpl.html')
                 }
             }
         })
