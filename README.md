@@ -28,15 +28,12 @@ Cheers!
 
 
 ##### Files Uploaded
-![Upload]
-(https://github.com/binarybaba/wardrobe.io/blob/master/.github/uploaded.jpg)
+![Uploaded](https://github.com/binarybaba/wardrobe.io/blob/master/.github/uploaded.jpg)
 
 
 ##### Empty Wardrobe
-![Upload]
-(https://github.com/binarybaba/wardrobe.io/blob/master/.github/emptyWardrobe.jpg)
+![Empty Wardrobe](https://github.com/binarybaba/wardrobe.io/blob/master/.github/emptyWardrobe.jpg)
 
 
 ##### Wardrobe with clothes
-![Upload]
-(https://github.com/binarybaba/wardrobe.io/blob/master/.github/wardrobe.jpg)
+![Wardrobe](https://github.com/binarybaba/wardrobe.io/blob/master/.github/wardrobe.jpg)
