@@ -7,7 +7,6 @@ module.exports = function(env){
     var config = {
         context: __dirname,
         entry: "./src/App.js",
-        devtool: env === "production" ? "source-map" : "cheap-eval-source-map",
         output: {
             path: path.join(__dirname, 'public'),
             filename: 'bundle.js',
@@ -55,6 +54,8 @@ module.exports = function(env){
         config.plugins.push(new UglifyJSPlugin({
             sourceMap: true
         }))
+    } else {
+        config.devtool = "cheap-eval-source-map"
     }
     return config;
 };
