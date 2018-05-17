@@ -20,13 +20,11 @@ Cheers!
 ### Screenshots
 
 ##### Upload Screen
-![Upload]
-(https://github.com/binarybaba/wardrobe.io/blob/master/.github/upload.jpg)
+![Upload](https://github.com/binarybaba/wardrobe.io/blob/master/.github/upload.jpg)
 
 
 ##### Uploading File
-![Upload]
-(https://github.com/binarybaba/wardrobe.io/blob/master/.github/select.jpg)
+![Upload File](https://github.com/binarybaba/wardrobe.io/blob/master/.github/select.jpg)
 
 
 ##### Files Uploaded
