@@ -8,8 +8,9 @@ function uploadController($scope, $state, clothFactory) {
         clothFactory.toggleLower(uri);
     }
 
-    function processImg64(dataUri) {
+    function processImg64(dataUri, fileName) {
         clothFactory.addCloth({
+            name:fileName,
             uri:dataUri,
             isLower: false,
             isInWardrobe: false

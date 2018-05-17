@@ -1,0 +1,22 @@
+.whoops {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.navbar-brand.mr-3{
+    font-size: 1.9rem;
+}
+.btn.btn-link {
+    margin-top: 12px;
+}
+.image{
+    padding: 4px;
+    display: block;
+    float:left;
+    list-style-type: none;
+}
+.card {
+    max-width: 400px;
+    min-height:400px;
+}

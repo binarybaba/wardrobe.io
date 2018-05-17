@@ -17,8 +17,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/bin/webpack --env=production",
-    "dev": "./node_modules/bin/webpack-dev-server --watch",
+    "build": "webpack --env=production",
+    "dev": "webpack-dev-server --watch",
     "watch": "webpack --watch"
   },
   "devDependencies": {

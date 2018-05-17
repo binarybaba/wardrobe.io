@@ -1,18 +1,34 @@
 <div>
-    <h1>Upload your images</h1>
-    <small><a ng-click="checkoutWardrobe()">or checkout your wardrobe</a></small>
+    <h1 class="text-center">Upload</h1>
+    <p class="text-center text-gray">Start by adding the pictures of your awesome clothes</p>
     <form>
-        <label for="up">Upload images</label>
-        <input id="up" type="file" to-64 on-convert-to-64="processImg64">
+        <label for="up">
+            <i class="icon icon-upload bg-primary icon-4x c-hand centered"></i>
+            <input id="up" type="file" to-64 on-convert-to-64="processImg64" style="display:none">
+        </label>
+
     </form>
-    <div class="images-container">
-        <ul class="images" ng-if="uploadedImages.length">
+    <div class="images-container" ng-if="uploadedImages.length">
+        <ul class="images">
             <li class="image" ng-repeat="img in uploadedImages">
-                <img src={{img.uri}}>
-                <div>
-                    <label for="is-lower">Lower</label>
-                    <input id="is-lower" type="checkbox" ng-model="img.isLower" ng-click="toggleLower(img.uri)">
-                    <button ng-click="moveToWardrobe(img.uri)">Move to wardrobe</button>
+                <div class="card">
+                    <div class="card-image">
+                        <img src={{img.uri}} class="img-responsive">
+                    </div>
+                    <div class="card-header">
+                        <div class="card-title h5">{{img.name}}</div>
+                        <div class="card-subtitle text-gray">
+                            {{img.isLower ? 'Lowerwear' : 'Upperwear'}}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" ng-click="moveToWardrobe(img.uri)">Move To Wardrobe</button>
+                        <button class="btn btn-secondary"
+                                ng-click="toggleLower(img.uri)"
+                        >
+                            {{img.isLower ? 'Make Upperwear' : 'Make Lowerwear'}}
+                        </button>
+                    </div>
                 </div>
             </li>
         </ul>

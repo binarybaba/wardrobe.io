@@ -1,11 +1,27 @@
 <div>
-    <h1>Your Wardrobe</h1>
-    <div>
-        <ul ng-if="clothesInWardrobe.length">
-            <li ng-repeat="cloth in clothesInWardrobe">
-                <img src={{cloth.uri}}>
-                <button ng-click="removeCloth(cloth.uri)">Delete</button>
+    <h1 class="text-center">Your Wardrobe</h1>
+    <div class="images-container" ng-if="clothesInWardrobe.length">
+        <ul class="images">
+            <li class="image" ng-repeat="cloth in clothesInWardrobe">
+                <div class="card">
+                    <div class="card-image">
+                        <img src={{cloth.uri}} class="img-responsive">
+                    </div>
+                    <div class="card-header">
+                        <div class="card-title h5">{{cloth.name}}</div>
+                        <div class="card-subtitle text-gray">
+                            {{img.isLower ? 'Lowerwear' : 'Upperwear'}}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" ng-click="removeCloth(cloth.uri)">Delete</button>
+                    </div>
+                </div>
             </li>
         </ul>
+    </div>
+    <div ng-if="!clothesInWardrobe.length">
+        <img class="whoops" src="whoops.png" alt="">
+        <p class="text-gray text-center">Looks like your wardrobe's empty</p>
     </div>
 </div>
