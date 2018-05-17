@@ -1,18 +1,18 @@
 <div>
     <h1>Upload your images</h1>
     <small><a ng-click="checkoutWardrobe()">or checkout your wardrobe</a></small>
-    <form ng-submit="uploadImages(images)">
+    <form>
         <label for="up">Upload images</label>
         <input id="up" type="file" to-64 on-convert-to-64="processImg64">
     </form>
-    <div>
-        <ul>
-            <li ng-repeat="img in uploadedImages">
+    <div class="images-container">
+        <ul class="images" ng-if="uploadedImages.length">
+            <li class="image" ng-repeat="img in uploadedImages">
                 <img src={{img.uri}}>
                 <div>
                     <label for="is-lower">Lower</label>
-                    <input id="is-lower" type="checkbox" ng-model="img.isLower" ng-click="toggleLower($index)">
-                    <button ng-click="moveToWardrobe($index)">Move to wardrobe</button>
+                    <input id="is-lower" type="checkbox" ng-model="img.isLower" ng-click="toggleLower(img.uri)">
+                    <button ng-click="moveToWardrobe(img.uri)">Move to wardrobe</button>
                 </div>
             </li>
         </ul>
