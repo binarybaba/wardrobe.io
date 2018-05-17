@@ -26,20 +26,27 @@ function clothFactory($localStorage) {// eslint-disable-line
     clothF.getClothes = function getAllClothes(){
         return clothes;
     };
-    clothF.toggleLower = function toggleLower(idx) {
-        clothes.forEach(function(cloth, i) {
-            if(i === idx) {
+    clothF.toggleLower = function toggleLower(uri) {
+        clothes.forEach(function(cloth) {
+            if(cloth.uri === uri) {
                 cloth.isLower = !cloth.isLower;
             }
         });
     };
-    clothF.moveToWardrobe = function moveToWardrobe(idx) {
-        clothes.forEach(function(cloth, i) {
-            if(i === idx) {
+    clothF.moveToWardrobe = function moveToWardrobe(uri) {
+        clothes.forEach(function(cloth) {
+            if(cloth.uri === uri) {
                 cloth.isInWardrobe = true;
             }
         });
         return clothes;
+    };
+    clothF.removeCloth = function removeCloth(uri) {
+        clothes = clothes.filter(function(cloth) {
+            return cloth.uri !== uri
+        });
+        return clothes;
+
     }
 
     return clothF;

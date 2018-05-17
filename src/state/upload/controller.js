@@ -4,8 +4,8 @@ function uploadController($scope, $state, clothFactory) {
         return !cloth.isInWardrobe
     });
 
-    function toggleLower(idx) {
-        clothFactory.toggleLower(idx);
+    function toggleLower(uri) {
+        clothFactory.toggleLower(uri);
     }
 
     function processImg64(dataUri) {
@@ -20,8 +20,8 @@ function uploadController($scope, $state, clothFactory) {
         $scope.$apply();
     }
 
-    function moveToWardrobe(idx) {
-        $scope.uploadedImages = clothFactory.moveToWardrobe(idx).filter(function(cloth) {
+    function moveToWardrobe(uri) {
+        $scope.uploadedImages = clothFactory.moveToWardrobe(uri).filter(function(cloth) {
             return !cloth.isInWardrobe;
         });
     }
