@@ -29,7 +29,8 @@ export default function config($urlRouterProvider, $stateProvider) { // eslint-d
             url:'/wardrobe',
             views: {
                 body: {
-                    template: require('./state/wardrobe/tpl.html')
+                    template: require('./state/wardrobe/tpl.html'),
+                    controller: 'wardrobeController'
                 }
             }
         })

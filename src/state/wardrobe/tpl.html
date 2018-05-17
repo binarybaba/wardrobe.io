@@ -1,0 +1,11 @@
+<div>
+    <h1>Your Wardrobe</h1>
+    <div>
+        <ul ng-if="clothesInWardrobe.length">
+            <li ng-repeat="cloth in clothesInWardrobe">
+                <img src={{cloth.uri}}>
+                <button ng-click="removeCloth(cloth.uri)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
