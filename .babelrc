@@ -1,10 +1,22 @@
 {
-  "presets" : [
+  "presets": [
+    "babel-preset-react",
     ["env", {
-      "targets" : {
+      "targets": {
         "browsers": "last 2 versions"
+      },
+      "loose": true,
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    [
+      "babel-plugin-transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
       }
-    }
     ]
   ]
 }
