@@ -3,42 +3,41 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link
 } from "react-router-dom";
 import { render } from 'react-dom';
 
-const App = () => (
-	<Router>
-		<div>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/about">About</Link>
-					</li>
-					<li>
-						<Link to="/users">Users</Link>
-					</li>
-				</ul>
-			</nav>
+import { db } from './Chat/util';
 
-			{/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+import { Viewport } from './styled/Viewport';
+import { Sidebar } from "./ContactList/components/Sidebar";
+import { Main } from "./Chat/components/Main";
+
+import Chat from './Chat/Chat';
+import ContactList from "./ContactList/ContactList";
+
+const App = () => (
+	<Viewport>
+		<Router>
+			<Sidebar>
+				<ContactList db={db}/>
+			</Sidebar>
 			<Switch>
-				<Route path="/about">
-					<div>About</div>
-				</Route>
-				<Route path="/users">
-					<div>Users</div>
-				</Route>
-				<Route path="/">
-					<div>Home</div>
-				</Route>
+				<Route path="/:contactName" children={(
+					<Main>
+						<Chat />
+					</Main>
+				)} />
 			</Switch>
-		</div>
-	</Router>
+		</Router>
+	</Viewport>
 );
+
+/*
+* Problem: store-less
+* time was limited so I couldnt configure the store
+* Ideally all actions should be
+* dispatched .
+* */
+
 
 render(<App />, document.getElementById('root'));
