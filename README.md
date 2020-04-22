@@ -1,39 +1,26 @@
-# Wardrobe.io
+# Chat App 
 
 
-A simple web app to upload your the images of your clothes.
-Also has a sweet wardrobe.
+Webapp that imitates a chat app.
 
-### How to
-```
-yarn
-```
-will install the dependencies
-```
-yarn dev
-```
-will fire up webpack dev server and the app will be running on
-localhost 9000
+`yarn`, `yarn dev`.
 
-Cheers!
+`eslint` might need node >= 10
 
-### Screenshots
+Problems:
+There was a conflict with eslint's version so I had to ditch the CRA inspired repo.
+Ended up using a repo I had made for webpack+angular a year ago and made changes for the build process for react.
+You can see the diffs.
 
-##### Upload Screen
-![Upload](https://github.com/binarybaba/wardrobe.io/blob/master/.github/upload.jpg)
+I couldn't finish things up in time so I coded some components so you get an Idea how I approach my solutions.
 
+Ideally, I wanted to have a store and dispatch actions to the store. It's not done yet. Could be done later on but
+I _will_ need more than refactor time since its been ages I configured a store too.
+I'm glad if you wanna watch while I do it but you gotta be patient :D
 
-##### Uploading File
-![Upload File](https://github.com/binarybaba/wardrobe.io/blob/master/.github/select.jpg)
+Styles we NOT added since I ran out of time. but the layout has been added.
 
+I used an hour yesterday to configure the build process and about 2.5 hours today where I actually coded with
+some distractions.
 
-##### Files Uploaded
-![Uploaded](https://github.com/binarybaba/wardrobe.io/blob/master/.github/uploaded.jpg)
-
-
-##### Empty Wardrobe
-![Empty Wardrobe](https://github.com/binarybaba/wardrobe.io/blob/master/.github/emptyWardrobe.jpg)
-
-
-##### Wardrobe with clothes
-![Wardrobe](https://github.com/binarybaba/wardrobe.io/blob/master/.github/wardrobe.jpg)
+Lemme know! Cheers! 
